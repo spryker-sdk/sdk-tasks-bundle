@@ -1,5 +1,5 @@
 ---
-id: 'hello:world'
+id: 'sdk:task:bundle'
 short_description: 'Sends greetings'
 help: 'Will greet the one using it'
 stage: hello
