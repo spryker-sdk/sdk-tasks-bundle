@@ -5,9 +5,9 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerSdk\SdkTasksBundle\SdkTasks;
+namespace SprykerSdk\SdkTasksBundle;
 
-use SprykerSdk\SdkTasksBundle\SdkTasks\DependencyInjection\SdkTasksExtension;
+use SprykerSdk\SdkTasksBundle\DependencyInjection\SdkTasksExtension;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
