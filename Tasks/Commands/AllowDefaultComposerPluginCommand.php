@@ -7,7 +7,7 @@
 
 namespace SprykerSdk\Sdk\Extension\Tasks\Commands;
 
-use SprykerSdk\SdkTasksBundle\Domain\Entity\Message;
+use SprykerSdk\Sdk\Core\Domain\Entity\Message;
 use SprykerSdk\SdkTasksBundle\Exception\FileNotFoundException;
 use SprykerSdk\SdkTasksBundle\Service\PbcFileModifierInterface;
 use SprykerSdk\SdkContracts\Entity\ContextInterface;

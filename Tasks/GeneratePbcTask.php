@@ -7,11 +7,11 @@
 
 namespace SprykerSdk\SdkTasksBundle\Tasks;
 
-use SprykerSdk\SdkTasksBundle\Domain\Entity\Lifecycle\InitializedEventData;
-use SprykerSdk\SdkTasksBundle\Domain\Entity\Lifecycle\Lifecycle;
-use SprykerSdk\SdkTasksBundle\Domain\Entity\Lifecycle\RemovedEventData;
-use SprykerSdk\SdkTasksBundle\Domain\Entity\Lifecycle\UpdatedEventData;
-use SprykerSdk\SdkTasksBundle\Domain\Entity\Placeholder;
+use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\InitializedEventData;
+use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\Lifecycle;
+use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\RemovedEventData;
+use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\UpdatedEventData;
+use SprykerSdk\Sdk\Core\Domain\Entity\Placeholder;
 use SprykerSdk\Sdk\Extension\ValueResolvers\PbcPhpVersionValueResolver;
 use SprykerSdk\SdkContracts\Entity\Lifecycle\LifecycleInterface;
 use SprykerSdk\SdkContracts\Entity\TaskInterface;
