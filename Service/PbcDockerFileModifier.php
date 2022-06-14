@@ -14,7 +14,7 @@ class PbcDockerFileModifier extends AbstractPbcFileModifier
     /**
      * @var \Symfony\Component\Yaml\Yaml
      */
-    private Yaml $yaml;
+    protected Yaml $yaml;
 
     /**
      * @param \Symfony\Component\Yaml\Yaml $yaml

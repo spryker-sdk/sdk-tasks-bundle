@@ -8,12 +8,12 @@
 namespace SprykerSdk\SdkTasksBundle\Tasks\Commands;
 
 use SprykerSdk\Sdk\Core\Domain\Entity\Message;
-use SprykerSdk\SdkTasksBundle\Exception\FileNotFoundException;
-use SprykerSdk\SdkTasksBundle\Service\PbcFileModifierInterface;
 use SprykerSdk\SdkContracts\Entity\ContextInterface;
 use SprykerSdk\SdkContracts\Entity\ConverterInterface;
 use SprykerSdk\SdkContracts\Entity\ExecutableCommandInterface;
 use SprykerSdk\SdkContracts\Entity\MessageInterface;
+use SprykerSdk\SdkTasksBundle\Exception\FileNotFoundException;
+use SprykerSdk\SdkTasksBundle\Service\PbcFileModifierInterface;
 
 class AllowDefaultComposerPluginCommand implements ExecutableCommandInterface
 {
