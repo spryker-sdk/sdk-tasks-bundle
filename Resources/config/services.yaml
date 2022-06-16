@@ -1,1 +1,19 @@
 services:
+  suite_nonsplit_installer_task:
+    class: SprykerSdk\SdkTasksBundle\Tasks\SuiteNonsplitInstallerTask
+    tags: [ 'sdk.task' ]
+    arguments:
+      $commands:
+        - '@check_git_command'
+        #        - '@check_docker_command'
+        #        - '@check_mutagen_for_mac_command'
+        - '@clone_suite_nonsplit_repository_command'
+        - '@update_docker_submodule_command'
+        #        - '@business_model_arm_command'
+        - '@docker_init_up_steps_command'
+
+    clone_suite_nonsplit_repository_command:
+      class: SprykerSdk\SdkTasksBundleTasks\Commands\CloneSuiteNonsplitRepositoryCommand
+
+    update_docker_submodule_command:
+      class: SprykerSdk\SdkTasksBundle\Tasks\Commands\UpdateDockerSubmoduleCommand
