@@ -12,8 +12,8 @@ services:
         #        - '@business_model_arm_command'
         - '@docker_init_up_steps_command'
 
-    clone_suite_nonsplit_repository_command:
-      class: SprykerSdk\SdkTasksBundleTasks\Commands\CloneSuiteNonsplitRepositoryCommand
+  clone_suite_nonsplit_repository_command:
+    class: SprykerSdk\SdkTasksBundleTasks\Commands\CloneSuiteNonsplitRepositoryCommand
 
-    update_docker_submodule_command:
-      class: SprykerSdk\SdkTasksBundle\Tasks\Commands\UpdateDockerSubmoduleCommand
+  update_docker_submodule_command:
+    class: SprykerSdk\SdkTasksBundle\Tasks\Commands\UpdateDockerSubmoduleCommand
