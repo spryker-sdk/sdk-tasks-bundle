@@ -70,7 +70,7 @@ class InternalBusinessModelInstallerTask implements TaskInterface
      */
     public function getId(): string
     {
-        return 'install:project:b2bc-demo-shop-internal';
+        return 'install:project:business-model-internal';
     }
 
     /**

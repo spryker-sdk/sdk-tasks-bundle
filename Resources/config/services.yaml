@@ -18,7 +18,6 @@ services:
   update_docker_submodule_command:
     class: SprykerSdk\SdkTasksBundle\Tasks\Commands\UpdateDockerSubmoduleCommand
 
-
   clone_internal_business_model_repository_command:
     class: SprykerSdk\SdkTasksBundle\Tasks\Commands\CloneInternalBusinessModelRepositoryCommand
 
