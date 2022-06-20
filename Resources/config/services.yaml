@@ -20,10 +20,10 @@ services:
 
 
   clone_internal_business_model_repository_command:
-    class: SprykerSdk\Sdk\Extension\Tasks\Commands\CloneInternalBusinessModelRepositoryCommand
+    class: SprykerSdk\SdkTasksBundle\Tasks\Commands\CloneInternalBusinessModelRepositoryCommand
 
   internal_business_model_installer_task:
-    class: SprykerSdk\Sdk\Extension\Tasks\InternalBusinessModelInstallerTask
+    class: SprykerSdk\SdkTasksBundle\Tasks\InternalBusinessModelInstallerTask
     tags: ['sdk.task']
     arguments:
       $commands:
@@ -34,3 +34,9 @@ services:
         - '@add_docker_sdk_command'
         #  - '@business_model_arm_command'
         - '@docker_init_up_steps_command'
+
+  internal_business_model_value_resolver:
+    class: SprykerSdk\SdkTasksBundle\ValueResolvers\InternalBusinessModelValueResolver
+    tags: [ "sdk.value_resolver" ]
+    arguments:
+      - '@value_receiver'
