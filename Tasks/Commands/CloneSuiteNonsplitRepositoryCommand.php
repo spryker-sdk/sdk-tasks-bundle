@@ -5,8 +5,9 @@ namespace SprykerSdk\SdkTasksBundle\Tasks\Commands;
 use SprykerSdk\SdkContracts\Entity\CommandInterface;
 use SprykerSdk\SdkContracts\Entity\ContextInterface;
 use SprykerSdk\SdkContracts\Entity\ConverterInterface;
+use SprykerSdk\SdkContracts\Entity\ErrorCommandInterface;
 
-class CloneSuiteNonsplitRepositoryCommand implements CommandInterface
+class CloneSuiteNonsplitRepositoryCommand implements CommandInterface, ErrorCommandInterface
 {
     /**
      * @return string
@@ -14,6 +15,14 @@ class CloneSuiteNonsplitRepositoryCommand implements CommandInterface
     public function getCommand(): string
     {
         return 'git clone git@github.com:spryker/suite-nonsplit.git --single-branch ./';
+    }
+
+    /**
+     * @return string
+     */
+    public function getErrorMessage(): string
+    {
+        return 'You do not have access to repository, contact to `spryker-sdk` organization administrator.';
     }
 
     /**

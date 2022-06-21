@@ -10,8 +10,9 @@ namespace SprykerSdk\SdkTasksBundle\Tasks\Commands;
 use SprykerSdk\SdkContracts\Entity\CommandInterface;
 use SprykerSdk\SdkContracts\Entity\ContextInterface;
 use SprykerSdk\SdkContracts\Entity\ConverterInterface;
+use SprykerSdk\SdkContracts\Entity\ErrorCommandInterface;
 
-class CloneInternalBusinessModelRepositoryCommand implements CommandInterface
+class CloneInternalBusinessModelRepositoryCommand implements CommandInterface, ErrorCommandInterface
 {
     /**
      * @return string
@@ -19,6 +20,14 @@ class CloneInternalBusinessModelRepositoryCommand implements CommandInterface
     public function getCommand(): string
     {
         return 'git clone %internal_business_model_url% --single-branch ./';
+    }
+
+    /**
+     * @return string
+     */
+    public function getErrorMessage(): string
+    {
+        return 'You do not have access to repository, contact to `spryker-sdk` organization administrator.';
     }
 
     /**
