@@ -5,11 +5,11 @@ services:
     arguments:
       $commands:
         - '@check_git_command'
-        #        - '@check_docker_command'
-        #        - '@check_mutagen_for_mac_command'
+        - '@check_docker_command'
+        - '@check_mutagen_for_mac_command'
         - '@clone_suite_nonsplit_repository_command'
         - '@update_docker_submodule_command'
-        #        - '@business_model_arm_command'
+        - '@business_model_arm_command'
         - '@docker_init_up_steps_command'
 
   clone_suite_nonsplit_repository_command:
@@ -27,11 +27,11 @@ services:
     arguments:
       $commands:
         - '@check_git_command'
-        #  - '@check_docker_command'
-        #  - '@check_mutagen_for_mac_command'
+        - '@check_docker_command'
+        - '@check_mutagen_for_mac_command'
         - '@clone_internal_business_model_repository_command'
         - '@add_docker_sdk_command'
-        #  - '@business_model_arm_command'
+        - '@business_model_arm_command'
         - '@docker_init_up_steps_command'
 
   internal_business_model_value_resolver:
