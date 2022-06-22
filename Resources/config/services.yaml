@@ -6,7 +6,7 @@ services:
   update_docker_submodule_command:
     class: SprykerSdk\SdkTasksBundle\Tasks\Commands\UpdateDockerSubmoduleCommand
 
-  internal_business_model_installer_task:
+  internal_project_installer_task:
     class: SprykerSdk\SdkTasksBundle\Tasks\InternalProjectInstallerTask
     tags: ['sdk.task']
     arguments:
