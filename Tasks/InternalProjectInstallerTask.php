@@ -15,9 +15,9 @@ use SprykerSdk\Sdk\Core\Domain\Entity\Placeholder;
 use SprykerSdk\Sdk\Extension\ValueResolvers\PCSystemValueResolver;
 use SprykerSdk\SdkContracts\Entity\Lifecycle\LifecycleInterface;
 use SprykerSdk\SdkContracts\Entity\TaskInterface;
-use SprykerSdk\SdkTasksBundle\ValueResolvers\InternalBusinessModelValueResolver;
+use SprykerSdk\SdkTasksBundle\ValueResolvers\InternalProjectValueResolver;
 
-class InternalBusinessModelInstallerTask implements TaskInterface
+class InternalProjectInstallerTask implements TaskInterface
 {
     /**
      * @var array<\SprykerSdk\SdkContracts\Entity\CommandInterface>
@@ -47,8 +47,8 @@ class InternalBusinessModelInstallerTask implements TaskInterface
     {
         return [
             new Placeholder(
-                '%' . InternalBusinessModelValueResolver::ALIAS . '%',
-                InternalBusinessModelValueResolver::ID,
+                '%' . InternalProjectValueResolver::ALIAS . '%',
+                InternalProjectValueResolver::ID,
             ),
             new Placeholder(
                 '%' . PCSystemValueResolver::ALIAS . '%',
@@ -70,7 +70,7 @@ class InternalBusinessModelInstallerTask implements TaskInterface
      */
     public function getId(): string
     {
-        return 'install:project:business-model-internal';
+        return 'install:project:internal';
     }
 
     /**

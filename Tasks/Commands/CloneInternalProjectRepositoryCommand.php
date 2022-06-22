@@ -12,14 +12,14 @@ use SprykerSdk\SdkContracts\Entity\ContextInterface;
 use SprykerSdk\SdkContracts\Entity\ConverterInterface;
 use SprykerSdk\SdkContracts\Entity\ErrorCommandInterface;
 
-class CloneInternalBusinessModelRepositoryCommand implements CommandInterface, ErrorCommandInterface
+class CloneInternalProjectRepositoryCommand implements CommandInterface, ErrorCommandInterface
 {
     /**
      * @return string
      */
     public function getCommand(): string
     {
-        return 'git clone %internal_business_model_url% --single-branch ./';
+        return 'git clone %internal_project_url% --single-branch ./';
     }
 
     /**

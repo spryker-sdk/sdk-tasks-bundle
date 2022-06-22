@@ -37,7 +37,7 @@ class UpdateDockerSubmoduleCommand implements CommandInterface
      */
     public function hasStopOnError(): bool
     {
-        return true;
+        return false;
     }
 
     /**
