@@ -37,7 +37,7 @@ class InternalProjectInstallerTask implements TaskInterface
      */
     public function getShortDescription(): string
     {
-        return 'Install internal B2B or B2C demo-shop';
+        return 'Install internal suite-nonsplit, B2B or B2C demo-shop';
     }
 
     /**

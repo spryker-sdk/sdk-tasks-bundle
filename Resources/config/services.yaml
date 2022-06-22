@@ -12,8 +12,8 @@ services:
     arguments:
       $commands:
         - '@check_git_command'
-        - '@check_docker_command'
-        - '@check_mutagen_for_mac_command'
+#        - '@check_docker_command'
+#        - '@check_mutagen_for_mac_command'
         - '@clone_internal_project_repository_command'
         - '@update_docker_submodule_command'
         - '@add_docker_sdk_command'
