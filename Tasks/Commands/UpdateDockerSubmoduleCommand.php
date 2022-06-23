@@ -1,19 +1,44 @@
 <?php
 
+/**
+ * Copyright © 2019-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
 namespace SprykerSdk\SdkTasksBundle\Tasks\Commands;
 
-use SprykerSdk\SdkContracts\Entity\CommandInterface;
 use SprykerSdk\SdkContracts\Entity\ContextInterface;
 use SprykerSdk\SdkContracts\Entity\ConverterInterface;
+use SprykerSdk\SdkContracts\Entity\ExecutableCommandInterface;
+use Symfony\Component\Process\Process;
 
-class UpdateDockerSubmoduleCommand implements CommandInterface
+class UpdateDockerSubmoduleCommand implements ExecutableCommandInterface
 {
+    /**
+     * @param \SprykerSdk\SdkContracts\Entity\ContextInterface $context
+     *
+     * @return \SprykerSdk\SdkContracts\Entity\ContextInterface
+     */
+    public function execute(ContextInterface $context): ContextInterface
+    {
+        $process = Process::fromShellCommandline('git submodule status docker');
+
+        if ($process->getExitCode() !== ContextInterface::SUCCESS_EXIT_CODE) {
+            return $context;
+        }
+
+        $process = Process::fromShellCommandline('git submodule update --init --force docker');
+        $context->setExitCode((int)$process->getExitCode());
+
+        return $context;
+    }
+
     /**
      * @return string
      */
     public function getCommand(): string
     {
-        return 'git submodule update --init --force docker';
+        return static::class;
     }
 
     /**
@@ -21,7 +46,7 @@ class UpdateDockerSubmoduleCommand implements CommandInterface
      */
     public function getType(): string
     {
-        return 'local_cli';
+        return 'php';
     }
 
     /**
