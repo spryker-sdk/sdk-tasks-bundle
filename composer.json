@@ -12,7 +12,7 @@
         "symfony/dependency-injection": "^5.0 || ^6.0",
         "symfony/config": "^5.0 || ^6.0",
         "symfony/yaml": "^5.0 || ^6.0",
-        "spryker-sdk/sdk-contracts": "^0.1.0",
+        "spryker-sdk/sdk-contracts": "dev-feature/sdk-635/dev-php74-compatibility",
         "symfony/process": "^5.0 || ^6.0",
         "spryker/code-sniffer": "^0.17.1",
         "phpstan/phpstan": "^1.2"
