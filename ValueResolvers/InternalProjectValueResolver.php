@@ -22,7 +22,7 @@ class InternalProjectValueResolver extends BusinessModelValueResolver
     public const ALIAS = 'internal_project_url';
 
     /**
-     * @var array<string,string>
+     * @var array<string, string>
      */
     protected const REPOSITORIES = [
         'b2b' => 'git@github.com:spryker/b2b-demo-shop-internal.git',
