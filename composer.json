@@ -29,9 +29,9 @@
         }
     },
     "scripts": {
-        "cs-check": "phpcs --colors -p -s --extensions=php --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml --ignore=/tests/_project/, src/ tests/ extension/",
-        "cs-fix": "phpcbf --colors -p --extensions=php --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml --ignore=/tests/_project/, src/ tests/ extension/",
-        "stan": "phpstan analyze -l 8 src/",
+        "cs-check": "phpcs --colors -p -s --extensions=php --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml DependencyInjection/ Resources/ Tasks/ ValueResolvers/",
+        "cs-fix": "phpcbf --colors -p --extensions=php --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml DependencyInjection/ Resources/ Tasks/ ValueResolvers/",
+        "stan": "phpstan analyze -l 8 DependencyInjection/ Resources/ Tasks/ ValueResolvers/",
         "linters": [
             "@cs-fix",
             "@cs-check",

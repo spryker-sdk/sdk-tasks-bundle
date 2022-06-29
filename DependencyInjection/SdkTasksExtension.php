@@ -16,7 +16,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class SdkTasksExtension extends Extension implements PrependExtensionInterface
 {
     /**
-     * @param array $configs
+     * @param array<mixed> $configs
      * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
      *
      * @return void

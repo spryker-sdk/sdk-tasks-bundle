@@ -41,7 +41,7 @@ class InternalProjectInstallerTask implements TaskInterface
     }
 
     /**
-     * @return array
+     * @return array<\SprykerSdk\Sdk\Core\Domain\Entity\Placeholder>
      */
     public function getPlaceholders(): array
     {
