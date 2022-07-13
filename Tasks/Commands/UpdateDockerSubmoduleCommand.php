@@ -68,7 +68,7 @@ class UpdateDockerSubmoduleCommand implements ExecutableCommandInterface
     /**
      * @return \SprykerSdk\SdkContracts\Entity\ConverterInterface|null
      */
-    public function getViolationConverter(): ?ConverterInterface
+    public function getConverter(): ?ConverterInterface
     {
         return null;
     }

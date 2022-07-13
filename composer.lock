@@ -405,12 +405,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spryker-sdk/sdk-contracts.git",
-                "reference": "78d06254076e303982d4c9fe214e370d39e426aa"
+                "reference": "5b9b2dd9bb1f48776193a3e905724fa98bf0a303"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spryker-sdk/sdk-contracts/zipball/78d06254076e303982d4c9fe214e370d39e426aa",
-                "reference": "78d06254076e303982d4c9fe214e370d39e426aa",
+                "url": "https://api.github.com/repos/spryker-sdk/sdk-contracts/zipball/5b9b2dd9bb1f48776193a3e905724fa98bf0a303",
+                "reference": "5b9b2dd9bb1f48776193a3e905724fa98bf0a303",
                 "shasum": ""
             },
             "require": {
@@ -435,7 +435,7 @@
                 "issues": "https://github.com/spryker-sdk/sdk-contracts/issues",
                 "source": "https://github.com/spryker-sdk/sdk-contracts/tree/feature/sdk-635/dev-php74-compatibility"
             },
-            "time": "2022-06-28T08:29:00+00:00"
+            "time": "2022-07-06T12:47:46+00:00"
         },
         {
             "name": "spryker/code-sniffer",
