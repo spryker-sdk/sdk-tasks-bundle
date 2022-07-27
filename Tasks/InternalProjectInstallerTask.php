@@ -12,10 +12,10 @@ use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\Lifecycle;
 use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\RemovedEventData;
 use SprykerSdk\Sdk\Core\Domain\Entity\Lifecycle\UpdatedEventData;
 use SprykerSdk\Sdk\Core\Domain\Entity\Placeholder;
-use SprykerSdk\Sdk\Extension\ValueResolvers\PCSystemValueResolver;
+use SprykerSdk\Sdk\Extension\ValueResolver\PCSystemValueResolver;
 use SprykerSdk\SdkContracts\Entity\Lifecycle\LifecycleInterface;
 use SprykerSdk\SdkContracts\Entity\TaskInterface;
-use SprykerSdk\SdkTasksBundle\ValueResolvers\InternalProjectValueResolver;
+use SprykerSdk\SdkTasksBundle\ValueResolver\InternalProjectValueResolver;
 
 class InternalProjectInstallerTask implements TaskInterface
 {
