@@ -8,4 +8,4 @@ parameters:
     ignoreErrors:
         - '#SprykerSdk\\Sdk\\*#'
     excludePaths:
-        - 'ValueResolvers/*'
+        - 'ValueResolver/*'

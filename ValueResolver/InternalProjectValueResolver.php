@@ -5,9 +5,9 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerSdk\SdkTasksBundle\ValueResolvers;
+namespace SprykerSdk\SdkTasksBundle\ValueResolver;
 
-use SprykerSdk\Sdk\Extension\ValueResolvers\BusinessModelValueResolver;
+use SprykerSdk\Sdk\Extension\ValueResolver\BusinessModelValueResolver;
 
 class InternalProjectValueResolver extends BusinessModelValueResolver
 {
