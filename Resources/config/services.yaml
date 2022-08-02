@@ -1,13 +1,13 @@
 services:
 
   clone_internal_project_repository_command:
-    class: SprykerSdk\SdkTasksBundle\Tasks\Commands\CloneInternalProjectRepositoryCommand
+    class: SprykerSdk\SdkTasksBundle\Task\Command\CloneInternalProjectRepositoryCommand
 
   update_docker_submodule_command:
-    class: SprykerSdk\SdkTasksBundle\Tasks\Commands\UpdateDockerSubmoduleCommand
+    class: SprykerSdk\SdkTasksBundle\Task\Command\UpdateDockerSubmoduleCommand
 
   internal_project_installer_task:
-    class: SprykerSdk\SdkTasksBundle\Tasks\InternalProjectInstallerTask
+    class: SprykerSdk\SdkTasksBundle\Task\InternalProjectInstallerTask
     tags: ['sdk.task']
     arguments:
       $commands:
@@ -21,7 +21,7 @@ services:
         - '@docker_init_up_steps_command'
 
   internal_project_value_resolver:
-    class: SprykerSdk\SdkTasksBundle\ValueResolvers\InternalProjectValueResolver
+    class: SprykerSdk\SdkTasksBundle\ValueResolver\InternalProjectValueResolver
     tags: [ "sdk.value_resolver" ]
     arguments:
       - '@value_receiver'
