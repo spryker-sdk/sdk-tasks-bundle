@@ -12,7 +12,7 @@
         "symfony/dependency-injection": "^5.0 || ^6.0",
         "symfony/config": "^5.0 || ^6.0",
         "symfony/yaml": "^5.0 || ^6.0",
-        "spryker-sdk/sdk-contracts": "dev-master",
+        "spryker-sdk/sdk-contracts": "^0.2.0",
         "symfony/process": "^5.0 || ^6.0",
         "spryker/code-sniffer": "^0.17.1",
         "phpstan/phpstan": "^1.8"
