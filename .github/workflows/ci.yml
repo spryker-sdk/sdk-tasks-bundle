@@ -18,12 +18,11 @@ jobs:
             matrix:
                 php-version: [
                     '7.4',
-                    '8.0',
                     '8.1'
                 ]
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
 
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
@@ -50,12 +49,7 @@ jobs:
               run: composer --version
 
             - name: Composer install
-              if: ${{ matrix.php-version != '7.4' }}
               run: composer install
-
-            - name: Composer install
-              if: ${{ matrix.php-version == '7.4' }}
-              run: composer update --prefer-lowest
 
             - name: Run PHPStan
               run: composer stan
