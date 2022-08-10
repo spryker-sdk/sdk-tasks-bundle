@@ -1,6 +1,6 @@
 {
     "name": "spryker-sdk/sdk-tasks-bundle",
-    "description": "The Spryker SDK bundle aims to provide a private tasks for SDK.",
+    "description": "The Spryker SDK bundle aims to provide internal tasks for SDK.",
     "type": "library",
     "license": "proprietary",
     "minimum-stability": "dev",
