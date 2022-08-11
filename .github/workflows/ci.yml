@@ -11,7 +11,7 @@ on:
 
 jobs:
     ci:
-        name: "CS, PHPStan, Security"
+        name: "CS, PHPStan, Security (normal)"
         runs-on: ubuntu-18.04
         strategy:
             fail-fast: false
@@ -58,7 +58,7 @@ jobs:
                 run: composer cs-check
 
     lowest:
-        name: "CS, PHPStan, Security"
+        name: "CS, PHPStan, Security (prefer-lowest)"
         runs-on: ubuntu-18.04
         strategy:
             fail-fast: false
