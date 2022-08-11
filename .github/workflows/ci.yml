@@ -10,19 +10,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  validation:
+  validation-8:
     name: "CS, PHPStan, Security"
     runs-on: ubuntu-18.04
     strategy:
       fail-fast: false
       matrix:
         php-version:
-          - '7.4'
           - '8.0'
           - '8.1'
-        dependencies:
-          - 'lowest'
-          - 'highest'
 
     steps:
       - uses: actions/checkout@v3
@@ -51,12 +47,55 @@ jobs:
         run: composer validate
 
       - name: Composer version
-        run: composer --version
+        run: |
+          composer --version
+          composer install
 
-      - name: Install dependencies
-        uses: ramsey/composer-install@v2
+      - name: Run PHPStan
+        run: composer stan
+
+      - name: Run CodeStyle checks
+        run: composer cs-check
+
+  validation-74:
+    name: "CS, PHPStan, Security"
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - '7.4'
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          dependency-versions: ${{ matrix.dependencies }}
+          php-version: ${{ matrix.php-version }}
+          extensions: json
+          tools: composer:v2
+
+      - name: Composer get cache directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Composer cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Composer validate
+        run: composer validate
+
+      - name: Composer version
+        run: |
+          composer --version
+          composer lowest-setup
 
       - name: Run PHPStan
         run: composer stan
