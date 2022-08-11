@@ -95,7 +95,7 @@ jobs:
       - name: Composer version
         run: |
           composer --version
-          composer lowest-setup
+          composer update --prefer-lowest
 
       - name: Run PHPStan
         run: composer stan
